@@ -36,16 +36,3 @@ module NetworkOperations =
                 
             feed network.weights network.biases [|input|]
 
-
-
-    //let backpropToActivationInput (network : Network) (activations : float [][]) =
-        
-    //    let rec deltaZ =
-            
-
-
-    //        0
-
-
-
-    //    0
