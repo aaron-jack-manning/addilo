@@ -1,4 +1,4 @@
-﻿namespace Adillo
+﻿namespace Addilo
 
 open System
 open Microsoft.FSharp.Core.Operators.Checked

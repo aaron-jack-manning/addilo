@@ -1,4 +1,4 @@
-﻿namespace Adillo
+﻿namespace Addilo
 
 open System
 open FSharp.Data

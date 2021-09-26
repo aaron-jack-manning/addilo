@@ -1,4 +1,4 @@
-﻿namespace Adillo
+﻿namespace Addilo
 
 open ActivationFunctions
 
@@ -7,6 +7,7 @@ open System
 module NetworkCreation =
 
     type Network = { biases : float [][]; weights : float [,][]; structure : uint list; activation : ActivationFunctionPair }
+
 
     let biasesGenerator ((structure:uint list), (initialValue:float)): float [][] =
         
@@ -20,22 +21,22 @@ module NetworkCreation =
 
         createBiases Array.empty (structure |> List.tail)
 
+
     let weightsGenerator (structure:uint list) : float [,][] =
         
-        let rand = Random ()
-
-        let uniformRandomVariable () = rand.NextDouble()
+        let uniformRandomVariable () =
+            let rand = Random ()
+            rand.NextDouble()
 
         let normalRandomVariable () =
             let boxMuller n1 n2 = Math.Sqrt(-2.0 * Math.Log(n1)) * Math.Cos(2.0 * Math.PI * n2)
-                
+            
             boxMuller (uniformRandomVariable ()) (uniformRandomVariable ())
 
         let weightsForLayerPair (firstLength:uint, secondLength:uint) : float [,] =
             let emptyArray = Array2D.create (int secondLength) (int firstLength) (0) // check order here
 
             emptyArray |> Array2D.map (fun x -> normalRandomVariable () )
-
 
         let rec createWeights (weights:float [,][]) (remainingStructure:uint list) : float [,][] =
             if remainingStructure |> List.length = 1 then
@@ -46,7 +47,9 @@ module NetworkCreation =
         createWeights Array.empty<float [,]> structure
 
 
-
     let generateNetwork ((functions:ActivationFunctionPair), (structure:uint list), (biasesInitialValue:float)) : Network = // also includes biases initial value
 
-        {biases = biasesGenerator (structure, biasesInitialValue); weights = weightsGenerator structure; structure = structure; activation = functions}
+        let biases = biasesGenerator (structure, biasesInitialValue)
+        let weights = weightsGenerator structure
+
+        {biases = biases; weights = weights; structure = structure; activation = functions}
