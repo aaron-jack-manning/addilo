@@ -28,7 +28,7 @@ function(network, input, output, epochs = 1, batch.size = 1, weights.lr = 0.01, 
 			
 			activations <- FeedForward(weights, biases, activation.function, input[,data.set.iterator], structure)
 			
-			delta <- DeltaBackpropagation(n, activations, output[,data.set.iterator], weights, biases, derivative.function, structure)
+			delta <- DeltaBackpropagation(activations, output[,data.set.iterator], weights, biases, derivative.function, structure)
 			weights.changes <- WeightsBackpropagate(delta, structure, activations)
 			biases.changes <- BiasesBackpropagate(delta, structure)
 			

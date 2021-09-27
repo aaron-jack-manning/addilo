@@ -1,0 +1,12 @@
+Package: addilo
+Type: Package
+Title: Addilo is a machine learning library for beginners
+Version: 2.0
+Date: 2021-09-27
+Author: Aaron Manning
+Maintainer: For suggested changes, please contact <contact@aaronmanning.net>
+Description: Adillo is a neural network and regression library that provides simple tools to generate, train and test neural networks for any given data set as well as create regression models for bivariate data. With some .csv files for your data and some basic understanding of the syntax of R, you will be able to create powerful tools for image recognition and data predictions.
+License: file LICENSE
+Imports: ggplot2
+Encoding: UTF-8
+LazyData: true

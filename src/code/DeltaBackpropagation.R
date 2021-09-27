@@ -1,5 +1,5 @@
 DeltaBackpropagation <-
-function(n, activations, expected.output, weights, biases, derivative.function, structure)
+function(activations, expected.output, weights, biases, derivative.function, structure)
 {
 	Delta <- function(n)
 	{
