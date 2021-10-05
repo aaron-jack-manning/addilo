@@ -1,6 +1,6 @@
 # Addilo
 
-Addilo is a machine learning and data analysis library designed for both those trying to understand the basics of machine learning by testing out different networks and those who desire a flexible neural networking creation system for comparative studies.
+Addilo is a machine learning and data analysis library designed for both those trying to understand the basics of machine learning by testing out different networks and those who desire a flexible neural networking creation system for comparative studies. This was my HSC software design and development project.
 
 ### Documentation
 
