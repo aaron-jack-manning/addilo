@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Addilo - Examples
+        </title>
+
+        <link href="../images/icon.png" rel="icon">
+        <link href="../images/apple-icon.png" rel="apple-touch-icon">
+
+        <!-- Bootstrap (Web Linked) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- AOS (Web Linked) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Boxicons -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!-- Other CSS Links (Local) -->
+        <link href="../css+js/icofont/icofont.min.css" rel="stylesheet">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Custom CSS and JS -->
+        <link href="../general-styling.css" rel="stylesheet">
+        <script src="../custom-js.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header id="header" class="fixed-top">
+            <div class ="container d-flex">
+                <div class="logo mr-auto">
+                    <h1 class="text-light">
+                        <a href="../">
+                            <span>
+                                Addilo
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li>
+                            <a href="../">
+                                Home
+                            </a>
+                        </li>
+                        <li class="drop-down">
+                            <a href="">
+                                Tutorials
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="../tutorials-neural-networks">
+                                        Neural Networks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../tutorials-regression">
+                                        Regression
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="active">
+                            <a href="../examples">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../help-and-downloads">
+                                Help and Downloads
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-title">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>
+                        Examples
+                    </h2>
+                    <p>
+                        There are many different applications of this library on different data sets. Use the example data sets and corresponding code to help get you started.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <span>
+            <a class="anchors" name="numbersanchor"></a>
+        </span>
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>
+                        MNIST Numbers
+                    </h2>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#description-numbers">
+                                Description
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#code-numbers">
+                                Code
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#downloads-numbers">
+                                Downloads
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active show" id="description-numbers">
+                            <div class="individual-tab">
+                                <p>
+                                    The MNIST numbers database is by far the most popular and common as it contains simple, low resolution, black and white photos which can be categorised into 10 distinct groups, and represents the 'Hello, world' of sorts within the field of machine learning and is used as a low level benchmark for many machine learning algorithms. As the saying goes "If it doesn't work on MNIST, it won't work at all." <br>
+                                    <br>
+                                    To see an application of Addilo to this set, download the data files available in the 'downloads' tap, saving them in the R working directory (which you can find by running <code>getwd()</code> in the console). The code from the 'code' will then run natively. <br>
+                                    <br>
+                                    <a href="http://yann.lecun.com/exdb/mnist/">
+                                        Source
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-numbers">
+                            <div class="individual-tab">
+                                <code>
+                                        library('addilo') <br> 
+                                        # Section 1: Loading in the data and training the algorithm <br>
+                                        input.data.set <- DataSetReader(1, 60000, "numberstraininput.csv", normalise = TRUE) <br>
+                                        expected.output.data.set <- DataSetReader(1, 60000, "numberstrainoutput.csv") <br>
+                                        input.testing <- DataSetReader(1, 10000, "numberstestinput.csv", normalise = TRUE) <br>
+                                        expected.output.testing <- DataSetReader(1, 10000, "numberstestoutput.csv") <br>
+                                        <br>
+                                        network <- NetworkGenerator(c(784, 20, 20, 10), swish, swish.derivative) <br>
+                                        network <- Train(network, input.data.set, expected.output.data.set, epochs = 3, batch.size = 1, track.progress = TRUE, track.frequency = "epoch") <br>
+                                        <br>
+                                        # Section 2: Testing the network against the entire testing set <br>
+                                        results <- Test(network, input.testing) <br>
+                                        correct.counter <- IdenticalColumnCheck(expected.output.testing, ReformatByMax(results)) <br>
+                                        print(as.data.frame(table(correct.counter))) <br>
+                                        <br>
+                                        # Section 3: Examining specific images <br>
+                                        image.number <- 1 # change this number to pick which element of the training set to examine <br>
+                                        image.matrix <- input.testing[,image.number] <br>
+                                        <br>
+                                        cat("The image is a ", which(results[,image.number] == max(results[,image.number])) - 1, "\n", sep = "") <br>
+                                        <br>
+                                        options(warn=-1) <br>
+                                        library(imager) <br>
+                                        plot(image.matrix %>% as.cimg) <br>
+                                        options(warn=0) <br>
+                                </code>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="downloads-numbers">
+                            <div class="individual-tab">
+                                <p>
+                                    The following data files have been formatted correctly for use with Addilo, where each column represents a new input/output set and each row represents a seperate neuron. Each file has been randomized and all variables are unnamed. <br>
+                                    <br>
+                                    <a href="examples-files/numberstraininput.csv">
+                                        Training - Input Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/numberstrainoutput.csv">
+                                        Training - Expected Output Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/numberstestinput.csv">
+                                        Testing - Input Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/numberstestoutput.csv">
+                                        Testing - Expected Output Data
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <span>
+            <a class="anchors" name="fashionanchor"></a>
+        </span>
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>
+                        MNIST Fashion
+                    </h2>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#description-fashion">
+                                Description
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#code-fashion">
+                                Code
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#downloads-fashion">
+                                Downloads
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active show" id="description-fashion">
+                            <div class="individual-tab">
+                                <p>
+                                    As a follow on from the MNIST numbers data base, MNIST fashion was designed to have the same image resolution and the same number of categories as MNIST numbers such that similar networks can be easily adapted. It attempts to address the biggest problem with MNIST numbers being the fact that the sheer simplicity of the images makes it very difficult to gague an algorithm's success on harder classification problems from it's performance on that set. Hence, MNIST fashion is similar in almost every way, but a bit higher of a bar to pass, and is worthwhile to use instead of MNIST numbers as a starting benchmark for machine learning.<br>
+                                    <br>
+                                    To see an application of Addilo to this set, download the data files available in the 'downloads' tap, saving them in the R working directory (which you can find by running <code>getwd()</code> in the console). The code from the 'code' will then run natively. <br>
+                                    <br>
+                                    <a href="https://github.com/zalandoresearch/fashion-mnist">
+                                        Source
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-fashion">
+                            <div class="individual-tab">
+                                <code>
+                                    library('addilo') <br>
+                                    # Section 1: Loading in the data and training the algorithm <br>
+                                    input.data.set <- DataSetReader(1, 60000, "fashiontraininput.csv", normalise = TRUE) <br>
+                                    expected.output.data.set <- DataSetReader(1, 60000, "fashiontrainoutput.csv") <br>
+                                    input.testing <- DataSetReader(1, 10000, "fashiontestinput.csv", normalise = TRUE) <br>
+                                    expected.output.testing <- DataSetReader(1, 10000, "fashiontestoutput.csv") <br>
+                                    <br>
+                                    network <- NetworkGenerator(c(784, 20, 20, 10), swish, swish.derivative) <br>
+                                    network <- Train(network, input.data.set, expected.output.data.set, epochs = 3, batch.size = 1, track.progress = TRUE, track.frequency = "epoch") <br>
+                                    <br>
+                                    # Section 2: Testing the network against the entire testing set <br>
+                                    results <- Test(network, input.testing) <br>
+                                    correct.counter <- IdenticalColumnCheck(expected.output.testing, ReformatByMax(results)) <br>
+                                    print(as.data.frame(table(correct.counter))) <br>
+                                    <br>
+                                    # Section 3: Examining specific images <br>
+                                    image.number <- 1 # change this number to pick which element of the training set to examine <br>
+                                    image.matrix <- input.testing[,image.number] <br>
+                                    <br>
+                                    dictionary <- c("T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle Boot") # dictionary of items <br>
+                                    <br>
+                                    cat("The image is a ", dictionary[which(results[,image.number] == max(results[,image.number]))], "\n", sep = "") <br>
+                                    <br>
+                                    options(warn=-1) <br>
+                                    library(imager) <br>
+                                    plot(image.matrix %>% as.cimg) <br>
+                                    options(warn=0) <br>
+                                </code>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="downloads-fashion">
+                            <div class="individual-tab">
+                                <p>
+                                    The following data files have been formatted correctly for use with Addilo, where each column represents a new input/output set and each row represents a separate neuron. Each file has been randomized and all variables are unnamed. <br>
+                                    <br>
+                                    <a href="examples-files/fashiontraininput.csv">
+                                        Training - Input Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/fashiontrainoutput.csv">
+                                        Training - Expected Output Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/fashiontestinput.csv">
+                                        Testing - Input Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/fashiontestoutput.csv">
+                                        Testing - Expected Output Data
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <span>
+            <a class="anchors" name="fisheranchor"></a>
+        </span>
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>
+                        Fisher's Iris Set (Iris Classification)
+                    </h2>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#description-fisher">
+                                Description
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#code-fisher">
+                                Code
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#downloads-fisher">
+                                Downloads
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active show" id="description-fisher">
+                            <div class="individual-tab">
+                                <p>
+                                    One of the oldest and most basic data sets for classification is Fisher's Iris flower data set, introduced by Ronald Fisher in 1936. This data set is small but due to the distinct nature of the different variables, high classification accuracy can be achieved with this set with very simple algorithms. This set is best used when trying to understand the inner workings and mechanics of a neural network as it provides a genuine use of algorithms so simple that they can be human understood on the fundamental level, not just in terms of the systems used to implement it. <br>
+                                    <br>
+                                    <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set">
+                                        Source
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-fisher">
+                            <div class="individual-tab">
+                                <code>
+                                    library('addilo') <br>
+                                    # Section 1: Loading in the data and training the algorithm <br>
+                                    input.data.set <- DataSetReader(1, 99, "irisinput.csv", normalise = TRUE) <br>
+                                    expected.output.data.set <- DataSetReader(1, 99, "irisoutput.csv") <br>
+                                    input.testing <- DataSetReader(100, 149, "irisinput.csv", normalise = TRUE) <br>
+                                    expected.output.testing <- DataSetReader(100, 149, "irisoutput.csv") <br>
+                                    <br>
+                                    network <- NetworkGenerator(c(4, 5, 4, 3), swish, swish.derivative) <br>
+                                    network <- Train(network, input.data.set, expected.output.data.set, epochs = 100, batch.size = 1, track.progress = TRUE, track.frequency = "epoch") <br>
+                                    <br>
+                                    # Section 2: Testing the network against the entire testing set <br>
+                                    results <- Test(network, input.testing) <br>
+                                    correct.counter <- IdenticalColumnCheck(expected.output.testing, ReformatByMax(results)) <br>
+                                    print(as.data.frame(table(correct.counter)))
+                                </code>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="downloads-fisher">
+                            <div class="individual-tab">
+                                <p>
+                                    The following data files have been formatted correctly for use with Addilo, where each column represents a new input/output set and each row represents a separate neuron. Each file has been randomized and all variables are unnamed. In the case of this data set, the data is only separated to input and output without training and testing distinction. This separation is made in the code and you may change it. <br>
+                                    <br>
+                                    <a href="examples-files/irisinput.csv">
+                                        Testing - Input Data
+                                    </a>
+                                    <br><br>
+                                    <a href="examples-files/irisoutput.csv">
+                                        Testing - Expected Output Data
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>
+                        Fisher's Iris Set (Iris Setosa Sepal Dimensions)
+                    </h2>
+                </div>
+                <div class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#description-regression">
+                                Description
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#code-regression">
+                                Code
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#downloads-regression">
+                                Downloads
+                            </a>
+                        </li>
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div class="tab-pane fade active show" id="description-regression">
+                            <div class="individual-tab">
+                                <p>
+                                    Fisher's Iris set can also be used to predict the missing dimension of the sepal from the other and the species. This data set specifically looks at the Iris Setosa and its sepal's width and length, relating these variables to make predictions.<br>
+                                    <br>
+                                    <a href="https://en.wikipedia.org/wiki/Iris_flower_data_set">
+                                        Source
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-regression">
+                            <div class="individual-tab">
+                                <code>
+                                    library('addilo') <br>
+                                    # Section 1: Loading in and organising the data <br>
+                                    X <- as.matrix(unname(read.csv("irisdimensions.csv")))[,1] <br>
+                                    Y <- as.matrix(unname(read.csv("irisdimensions.csv")))[,2] <br>
+                                    <br>
+                                    # Section 2: Creating and examining the model <br>
+                                    model <- Regress(X, Y) <br>
+                                    <br>
+                                    print(model) <br>
+                                    <br>
+                                    # Section 3: Making data predictions from the X variable <br>
+                                    independent.variable <- 2 # change this according to your independent variable to predict from and if you are interpolating or extrapolating <br>
+                                    <br>
+                                    print(Predictor(model, independent.variable))
+                                </code>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="downloads-regression">
+                            <div class="individual-tab">
+                                <p>
+                                    The following data is organised as two columns, where the first is the sepal width and the second is the sepal length. <br>
+                                    <br>
+                                    <a href="examples-files/irisdimensions.csv">
+                                        Full Data
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        
+
+
+
+        <!-- Scripts to run in Body -->
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

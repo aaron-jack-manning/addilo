@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Addilo - Tutorials: Neural Networks
+        </title>
+
+        <link href="../images/icon.png" rel="icon">
+        <link href="../images/apple-icon.png" rel="apple-touch-icon">
+
+        <!-- Bootstrap (Web Linked) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- AOS (Web Linked) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Boxicons -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!-- Other CSS Links (Local) -->
+        <link href="../css+js/icofont/icofont.min.css" rel="stylesheet">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Custom CSS and JS -->
+        <link href="../general-styling.css" rel="stylesheet">
+        <script src="../custom-js.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header id="header" class="fixed-top">
+            <div class ="container d-flex">
+                <div class="logo mr-auto">
+                    <h1 class="text-light">
+                        <a href="../">
+                            <span>
+                                Addilo
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li>
+                            <a href="../">
+                                Home
+                            </a>
+                        </li>
+                        <li class="drop-down active">
+                            <a href="">
+                                Tutorials
+                            </a>
+                            <ul>
+                                <li class="active">
+                                    <a href="../tutorials-neural-networks">
+                                        Neural Networks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../tutorials-regression">
+                                        Regression
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../examples">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../help-and-downloads">
+                                Help and Downloads
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-title">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>
+                        Building a Neural Network
+                    </h2>
+                    <p>
+                        The following section covers the process of using Addilo to create a multi-layer neural network from importing data, to training the network, to testing it against some unseen data.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container tutorial-body">
+                <div class="section-title">
+                    <p>
+                        <h3>
+                            Importing the data
+                        </h3>
+                        The first thing we need to do before creating our network is import the training and testing data into the R studio environment. The following functions will do this: <br>
+                        <br>
+                        <code>
+                            input.data.set <- DataSetReader(first.input.column, last.input.column, file.path, normalise) <br>
+                            output.data.set <- DataSetReader(first.input.column, last.input.column, file.path, normalise)
+                        </code> <br>
+                        <br>
+                        The parameters are as follows:
+                        <ul>
+                            <li>
+                                <code>first.input.column</code> and <code>last.input.column</code> determine the start and end column of the data set.
+                            </li>
+                            <li>
+                                <code>file.path</code> is a string containing the file path to the desired data set.
+                            </li>
+                            <li>
+                                <code>normalise</code> is a Boolean variable determining if the data set will be normalised between 0 and 1 (recommended for input data).
+                            </li>
+                        </ul> <br>
+                        This code relies on the data being correctly formatted. Any downloads taken from the examples page on this site will be correctly formatted. When using your own data make sure the .csv files are formatted as follows: <br>
+                        <br>
+                        Input Data: <br>
+                        <br>
+                        <img src="../images/input-data-neural-network.png" class="col-sm-12 col-md-8 col-lg-6" > <br>
+                        <br>
+                        Expected Output: <br>
+                        <br>
+                        <img src="../images/output-data-neural-network.png" class="col-sm-12 col-md-6"> <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Generating the Network
+                        </h3>
+                        Now that we have our data, we can create our generic neural network of the right size for our data. Once again, there is a function that does this: <br>
+                        <br>
+                        <code>
+                            network <- NetworkGenerator(structure, activation.function, derivative.function, biases.initial.value)
+                        </code> <br>
+                        <br>
+                        <ul>
+                            <li>
+                                <code>structure</code> is a vector where each index is a layer and the value within that index defines how many neurons are in that layer. The input layer should have the number of neurons specified in the input set. You can check this by running: <code>NCOL(input.data.set)</code>. The output layer should have the number of neurons specified in the output set. You can check this by running: <code>NCOL(output.data.set)</code>.
+                            </li>
+                            <li>
+                                <code>activation.function</code> and its corresponding <code>derivative.function</code> determine how the inputs to each neuron are mapped onto its activation. If you are unfamiliar with different activation functions and their effects, use <code>sigmoid</code> and <code>sigmoid.derivative</code>. There are 6 functions included in the library however any vectorised function you have created can be used by passing the function itself as the <code>activation.function</code> argument.
+                            </li>
+                            <li>
+                                <code>biases.initial.value</code> determines the initial value of all biases in the network. Only modify this if you are doing research on or testing the effects of different values.
+                            </li>
+                        </ul> <br>
+                        The parameters that you are now specifying are called hyperparameters. This means they are not trained but are part of the design of the algorithm. <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Training the Network
+                        </h3>
+                        Now we need to train the network. There is a function that does this, using the variables we have already created. <br>
+                        <br>
+                        <code>
+                            network <- Train(network, input, output, epochs = 1, batch.size = 1, weights.lr = 0.01, biases.lr = 0.1, track.progress = FALSE, track.frequency = "epoch")
+                        </code> <br>
+                        <br>
+                        <ul>
+                            <li>
+                                <code>network</code> is the network you have already generated from earlier in this tutorial.
+                            </li>
+                            <li>
+                                <code>input</code> and <code>output</code> are the data sets you loaded in earlier.
+                            </li>
+                            <li>
+                                <code>epochs</code> and <code>batch.size</code> determine the number of times the full data set is iterated and the size of each batch before updating the network respectively.
+                            </li>
+                            <li>
+                                <code>weights.lr</code> and <code>biases.lr</code> are the learning rates for the weights and biases respectively. These are coefficients multiplied with the negative rate of change before applying updates, and an generally kept small to avoid skipping over minima of the cost function.
+                            </li>
+                            <li>
+                                <code>track.progress</code> determines if you wish the R console to track the progress of training and output a graph of the changes of cost.
+                            </li>
+                            <li>
+                                <code>track.frequency</code> is a string either "epoch" or "batch" and determines how regularly cost measurements are given in the graph of changes in cost.
+                            </li>
+                        </ul> <br>
+                        This function, as you can see above, is where the other hyperparameters are determined. <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Testing the Network
+                        </h3>
+                        To feed forward the neural network on training data, the <code>test</code> function will do this for any size data set and give the output in the standard format for this library. <br>
+                        <code>
+                            output <- Test(network, input)
+                        </code> <br>
+                        <br>
+                        <ul>
+                            <li>
+                                <code>network</code> is an already trained neural network, ready to be applied to unseen data.
+                            </li>
+                            <li>
+                                <code>input</code> is an unseed data set to feed to the network.
+                            </li>
+                        </ul> <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Other Features
+                        </h3>
+                        In addition to the essential functions involved in training a neural network, functions exist to randomize data sets, save and store the neural network and reformat the results for easier comparison. Details in these can be found in each function's corresponding help pages which you can access directly from the R console. For more information see <a href="../help-and-downloads">Help and Downloads</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Scripts to run in Body -->
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

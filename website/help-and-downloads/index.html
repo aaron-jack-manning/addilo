@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Addilo - Help and Downloads
+        </title>
+
+        <link href="../images/icon.png" rel="icon">
+        <link href="../images/apple-icon.png" rel="apple-touch-icon">
+
+        <!-- Bootstrap (Web Linked) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- AOS (Web Linked) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Boxicons -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!-- Other CSS Links (Local) -->
+        <link href="../css+js/icofont/icofont.min.css" rel="stylesheet">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Custom CSS and JS -->
+        <link href="../general-styling.css" rel="stylesheet">
+        <script src="../custom-js.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header id="header" class="fixed-top">
+            <div class ="container d-flex">
+                <div class="logo mr-auto">
+                    <h1 class="text-light">
+                        <a href="../">
+                            <span>
+                                Addilo
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li>
+                            <a href="../">
+                                Home
+                            </a>
+                        </li>
+                        <li class="drop-down">
+                            <a href="">
+                                Tutorials
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="../tutorials-neural-networks">
+                                        Neural Networks
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../tutorials-regression">
+                                        Regression
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../examples">
+                                Examples
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="../help-and-downloads">
+                                Help and Downloads
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-title">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>
+                        Help and Downloads
+                    </h2>
+                    <p>
+                        This page is dedicated to user support, installation instructions and download links.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container tutorial-body">
+                <div class="section-title">
+                    <p>
+                        If you want specific help on how to use each part of the library, see the tutorial pages on <a href="../tutorials-neural-networks">neural networks</a> and <a href="../tutorials-regression">regression</a>. Also take a look at the <a href="../#faqanchor">FAQ</a>. <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Installation Guide
+                        </h3>
+                        To install Addilo, first download the library files <a href="../library/addilo_2.0.tar.gz">here</a> and place it in the working directory which you can find by running <code>getwd()</code> in the R console.<br>
+                        <br>
+                        To then install the package, run the following code: <br>
+                        <br>
+                        <code>
+                            install.packages("addilo_2.0.tar.gz", repos = NULL, type = "source")
+                        </code> <br>
+                        <br>
+                        This will automatically install the package in the default location.<br>
+                        <br>
+                        If you are experiencing issues with this method, you can also install a package using the RStudio menu. <br>
+                        <br>
+                        <ol>
+                            <li>
+                                Select 'Tools' from the menu up the top, followed by the first option labelled 'Install Packages...'
+                            </li>
+                            <li>
+                                In the drop down menu labelled 'Install From:', select 'Package Archive File (.zip; .tar.gz)'
+                            </li>
+                            <li>
+                                Specify the path to the downloaded file by using the 'Browse' button next to the 'Package Archive:' menu
+                            </li>
+                            <li>
+                                Select 'Install'
+                            </li>
+                        </ol><br>
+                        Regardless of the method you used, your R package will now be ready to use. Simply run <code>library('addilo')</code> and code away!<br>
+                        <br>
+                        <br>
+                        <h3>
+                            Package Documentation, Help Pages and Troubleshooting
+                        </h3>
+                        To find a help page for any given function run either <code>?function.name</code> or <code>help(function.name)</code> in the R console where 'function.name' is replaced by the specific function you are after. This is where you will find thorough documentation on the specifics of each function parameter and its valid values. For other troubleshooting, any problems that could arise within Addilo have specific error messages describing the necessary steps to resolve the problems. <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Source Code
+                        </h3>
+                        The full source code for Adillo is available <a href="https://github.com/ajax2112/Addilo">here</a>.
+                        <br>
+                        <br>
+                        <h3>
+                            Other Resources/Links
+                        </h3>
+                        For those who are completely unfamiliar with the theory, calculus, linear algebra and programmatic methods involved in neural networks it is my recommendation to first watch the video series linked <a href="https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">here</a> as it will give an intuitive understanding as to how neural networks work, and then to read the explanatory sections in the appendix of a paper I wrote which thoroughly explains the mathematics involved in implementing a neural network and can be found on <a href="https://www.aaronmanning.net">my personal site</a>.<br>
+                        <br>
+                        For those unfamiliar with the language of R, by far the best resource I would recommend to learn is the book 'Learning R' by Richard Cotton which you can purchase <a href="https://www.oreilly.com/library/view/learning-r/9781449357160/">here</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        
+
+
+
+
+
+
+
+        <!-- Scripts to run in Body -->
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>

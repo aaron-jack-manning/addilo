@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Addilo - Tutorials: Regression
+        </title>
+
+        <link href="../images/icon.png" rel="icon">
+        <link href="../images/apple-icon.png" rel="apple-touch-icon">
+
+        <!-- Bootstrap (Web Linked) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        
+        <!-- AOS (Web Linked) -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <!-- Boxicons -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!-- Other CSS Links (Local) -->
+        <link href="../css+js/icofont/icofont.min.css" rel="stylesheet">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+        <!-- Custom CSS and JS -->
+        <link href="../general-styling.css" rel="stylesheet">
+        <script src="../custom-js.js"></script>
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <header id="header" class="fixed-top">
+            <div class ="container d-flex">
+                <div class="logo mr-auto">
+                    <h1 class="text-light">
+                        <a href="../">
+                            <span>
+                                Addilo
+                            </span>
+                        </a>
+                    </h1>
+                </div>
+
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li>
+                            <a href="../">
+                                Home
+                            </a>
+                        </li>
+                        <li class="drop-down active">
+                            <a href="">
+                                Tutorials
+                            </a>
+                            <ul>
+                                <li>
+                                    <a href="../tutorials-neural-networks/">
+                                        Neural Networks
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="../tutorials-regression/">
+                                        Regression
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../examples">
+                                Examples
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../help-and-downloads">
+                                Help and Downloads
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="page-title">
+            <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2>
+                        Creating a Regression Model
+                    </h2>
+                    <p>
+                        The following section covers the process of using Addilo to create a regression model for 2-dimensional data. This aspect of Addilo is designed as a more user friendly and user centric alternative to existing methods whilst having the benefit of a simple predictor function that accepts the model as an input.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container tutorial-body">
+                <div class="section-title">
+                    <p>
+                        <h3>
+                            Importing and Viewing the Data
+                        </h3>
+                        Since bivariate data will come in a variety of different forms, there is no general way to import and clean this data. Ultimately, the desired objects in the R environment are two vectors, one for each variable, where the same index denotes the same point. For this example we will call these X and Y.<br>
+                        <br>
+                        Once you have the data in the R environment, it is always worthwhile to view it first and get a feel for the kind of relationship, if any, that is present. This can be done by running:<br>
+                        <br>
+                        <code>
+                            plot(X, Y)
+                        </code><br>
+                        <br>
+                        <br>
+                        <h3>
+                            Generating and Examining the Model
+                        </h3>
+                        Due to the user centric design, instead of determining the kind of regression model to use, you can simply use the following function that will determine this for you: <br>
+                        <br>
+                        <code>
+                            model <- Regress(X, Y)
+                        </code> <br>
+                        <br>
+                        The output of this function is a named vector of strings that gives the general form of the line/curve, the R<sup>2</sup> on the original data set and the coefficients as named in the general form. <br>
+                        <br>
+                        <br>
+                        <h3>
+                            Interpolating and Extrapolating
+                        </h3>
+                        To now use this function to predict your dependent variable, run the following code: <br>
+                        <br>
+                        <code>
+                            Predictor(model, independent.variable)
+                        </code> <br>
+                        <br>
+                        Where your independent variable is an instance of the known variable. <br>
+                        <br>
+                        The two functions specified above are the only two accessible within the library by design to keep the simplicity and easy of use. However, all code is available to download for any users who wish to look at the back-end implementation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scripts to run in Body -->
+        <script>
+            AOS.init();
+        </script>
+    </body>
+</html>
