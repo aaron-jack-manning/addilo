@@ -2,15 +2,15 @@
 
 Addilo is a machine learning and data analysis library designed for both those trying to understand the basics of machine learning by testing out different networks and those who desire a flexible neural networking creation system for comparative studies. This was my HSC software design and development project.
 
-### Documentation
+## Documentation
 
-An installation guide is included below. For full documentation see [addilo.net](https://addilo.net). Source code for the website can be found [here](https://github.com/aaron-jack-manning/addilo-website).
+An installation guide is included below. For full documentation see [addilo.net](https://addilo.net). The website source can be found in the `website` folder above. Note that due to the file size, an `example-files` folder is missing from the top level of the website. However, its contents can be found in the `example-data` folder on the top level of this repository.
 
-### Contents of this Repository
+## Contents of this Repository
 
 This repository includes the source code, help pages (which show up with R `help` function), package metadata and sample usage code along with the relavent datasets.
 
-### Installation Guide
+## Installation Guide
 
 To install Addilo, first download the library files here and place it in the working directory which you can find by running `getwd()` in the R console.
 
