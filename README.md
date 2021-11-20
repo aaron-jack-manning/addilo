@@ -8,7 +8,7 @@ An installation guide is included below. For full documentation see [addilo.net]
 
 ## Contents of this Repository
 
-This repository includes the source code, help pages (which show up with R `help` function), package metadata and sample usage code along with the relavent datasets.
+This repository includes the source code, help pages (which show up with R `help` function), package metadata, sample usage code along with the relavent datasets and website source.
 
 ## Installation Guide
 
