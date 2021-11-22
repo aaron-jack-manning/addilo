@@ -28,3 +28,14 @@ If you are experiencing issues with this method, you can also install a package 
 4. Select `Install`
 
 Regardless of the method you used, your R package will now be ready to use. Simply run library('addilo') and code away!
+
+## Recreating Package
+
+To recreate package from source files:
+
+- Open RStudio
+- File -> New Project -> New Directory -> R Package
+- Specify name and location
+- Keep R studio session open while loading all source files into the auto generated folder so that they appear in the RStudio files window
+- Build -> Check Package
+- Build -> Build Source Package 
