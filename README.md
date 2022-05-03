@@ -4,7 +4,7 @@ Addilo is a machine learning and data analysis library designed for both those t
 
 ## Documentation
 
-An installation guide is included below. For full documentation see [addilo.net](https://addilo.net). The website source can be found in the `website` folder above.
+An installation guide is included below. For full documentation see [addilo.aaronmanning.net](https://addilo.aaronmanning.net). The website source can be found in the `website` folder above.
 
 ## Contents of this Repository
 
